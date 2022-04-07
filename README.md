@@ -61,11 +61,12 @@ The configuration details of each machine may be found below.
  
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump-Box-Provisioner | Gateway  | 44.77.55.33 ; 10.0.0.4   | Linux            |
-| Web-1        |webserver    | 10.0.0.5     | Linux            |
-| Web-2        |webserver    | 10.0.0.6     | Linux            |
-| ELKServer    |Kibana       | 104.45.159.216 ; 10.1.0.4     | Linux            |
-| RedTeam-LB|Load Balancer| 40.122.215.16| DVWA            |
+| Jump-Box | Gateway  | 20.210.224.165; 10.0.0.4  | Linux    |
+| Web-1        |webserver    | 10.0.0.5    | Linux            |
+| Web-2        |webserver    | 10.0.0.6   | Linux            |
+| Wev-3        |webserver    | 10.0.0.7    | Linux            |
+| ELKServer    |Kibana       |  10.1.0.0/16   | Linux       |
+| RedTeam-LB|Load Balancer| 10.0.0.0/16| DVWA            |
  
 In addition to the above, Azure has provisioned a load balancer in front of all machines except for the jump box. The load balancer's targets are organized into availability zones: Web-1 + Web-2
 
@@ -74,17 +75,17 @@ In addition to the above, Azure has provisioned a load balancer in front of all 
  
 The machines on the internal network are not exposed to the public Internet.
  
-Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: 47.185.204.83 Machines within the network can only be accessed by SSH from Jump Box.
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: 20.210.140.233 Machines within the network can only be accessed by SSH from Jump Box.
  
 A summary of the access policies in place can be found in the table below.
  
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump-Box-Provisioner | Yes                 | 47.185.204.83        |
-| ELKServer      | Yes                  |  47.185.204.83:5601        |
-| DVWA 1   | No                  |  10.0.0.1-254        |
-| DVWA 2   | No                  |  10.0.0.1-254        |
-
+| Jump-Box | Yes                 | 20.210.224.165; 10.0.0.4|
+| ELKServer| No                  |  10.1.0.0/16         |
+| DVWA 1   | No                  |  10.0.0.5        |
+| DVWA 2   | No                  |  10.0.0.6        |
+| DVWA 3   | No                  | 10.0.0.7         |
 
  
 ---
@@ -298,21 +299,19 @@ This ELK server is configured to monitor the following machines:
 
 - Web-1 (DVWA 1) | 10.0.0.5
 - Web-2 (DVWA 2) | 10.0.0.6
-
+- Web-3 (DVWA 3) | 10.0.0.7
 I have installed the following Beats on these machines:
 
 - Filebeat
 - Metricbeat
 
-<details>
-<summary> <b> Click here to view Target Machines & Beats. </b> </summary>
 
 ---
 
 	
 These Beats allow us to collect the following information from each machine:
 
-`Filebeat`: Filebeat detects changes to the filesystem. I use it to collect system logs and more specifically, I use it to detect SSH login attempts and failed sudo escalations.
+`Filebeat`: Filebeat can detect changes to the filesystem. It's used to collect system logs and more accurately, to detect SSH login attempts and failed sudo escalations.
 
 We will create a [filebeat-config.yml](https://github.com/Diablo5G/ELK-Stack-Project/blob/main/Ansible/filebeat-config.yml) and [metricbeat-config.yml](https://github.com/Diablo5G/ELK-Stack-Project/blob/main/Ansible/metricbeat-config.yml) configuration files, after which we will create the Ansible playbook files for both of them.
 
