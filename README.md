@@ -427,7 +427,7 @@ RUN `nano metricbeat-playbook.yml` to enable the metricbeat service on boot by M
 
 Verify that this playbook is completed by navigate back to the Filebeat installation page on the ELK server GUI
 
-![Metricbeat_playbook_verify](https://github.com/Diablo5G/ELK-Stack-Project/blob/main/Resources/Images/Metricbeat_playbook_verify.png)
+(https://github.com/Diablo5G/ELK-Stack-Project/blob/main/Resources/Images/Metricbeat_playbook_verify.png)
 
  
 </details>
