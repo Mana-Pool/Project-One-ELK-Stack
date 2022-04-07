@@ -553,7 +553,7 @@ Next, view the Metrics page for that VM in Kibana and comparing 2 of web servers
 
 Another view of the CPU usage metrics Kibana collected:
 
-![cpu stress test results graph](https://github.com/Diablo5G/ELK-Stack-Project/blob/main/Resources/Images/cpu%20stress%20test%20results%20graph.png)
+![cpu stress test results graph](https://github.com/Mana-Pool/Project-One-ELK-Stack/blob/main/Syslog%20Kibana.jpg)
 
 
 #### Generate a high amount of web requests to both web servers and make sure that Kibana is picking them up.
