@@ -151,15 +151,6 @@ Click 'Explore On Your Own' and you should see the following:
 
  <img width="960" alt="Kibana_dashboard" src="https://user-images.githubusercontent.com/66395625/94220160-fddae580-fead-11ea-9c17-8a789bf1522c.PNG">
 
-
-Answer the following questions to fill in the blanks:
-- Which file is the playbook? Where do you copy it?
-    	 /etc/ansible/file/filebeat-configuration.yml 
-- Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-        edit the /etc/ansible/hosts file to add webserver/elkserver ip addresses
-- Which URL do you navigate to in order to check that the ELK server is running?
-    	 http://[your.ELK-VM.External.IP]:5601/app/kibana
-
  Using the Playbook-filebeat-playbook.yml
 
  - Copy the filebeat.yml file to the /etc/ansible/files/ directory.
