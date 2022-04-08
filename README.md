@@ -93,10 +93,10 @@ A summary of the access policies in place can be found in the table below.
 
 ### ELK Configuration
  
-Ansible was used to automate the configuration of the ELK server. No configuration was performed manually, which is advantageous because Ansible can be used to easily configure new machines, update programs, and configurations on hundreds of servers at once, and the best part is that the process is the same whether we're managing one machine or dozens and even hundreds.
+Ansible was used to automate the configuration of the ELK server. Ansible can be used to easily configure new machines, update programs, and configurations on hundreds of servers at once
 
 > What is the main advantage of automating configuration with Ansible?
-- Ansible is focusing on bringing a server to a certain state of operation.
+- Ansible focuses on bringing a server to a certain state of operation.
 
 <details>
 <summary> <b> Click here to view ELK Configuration. </b> </summary>
