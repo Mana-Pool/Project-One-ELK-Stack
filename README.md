@@ -171,7 +171,7 @@ Answer the following questions to fill in the blanks:
 
       you should see the following:
 
- <img width="960" alt="Filebeat syslog" src="https://user-images.githubusercontent.com/66395625/94220157-fadff500-fead-11ea-86cb-3b09a1988f2e.PNG">
+ <img width="960" alt="Filebeat syslog" src="https://github.com/Mana-Pool/Project-One-ELK-Stack/blob/9d946a64ba75195b72971129432289314d70f3f5/syslog2.jpg">
  
    The commands needed to run the Ansible configuration for the Elk-Server are:
 
