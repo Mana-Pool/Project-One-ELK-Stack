@@ -288,7 +288,7 @@ Go to Network Security Group to config our host IP to Kibana as follow
 
 Then try to access web browser to http://<your.ELK-VM.External.IP>:5601/app/kibana 
  
-![Access_Kibana](https://raw.githubusercontent.com/Mana-Pool/Project-One-ELK-Stack/main/Syslog%20Kibana.jpg)
+![Access_Kibana](https://github.com/Mana-Pool/Project-One-ELK-Stack/blob/5dd2b178c25c90b0e45cd36e9d071c6ca9914a06/Syslog%20Kibana.jpg)
 
 </details>
 
